@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Raleway:wght@200;300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+body {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* VARIABLES */
+/* FONT SIZE */
+/* FONT FAMILY */
+/* COLORS */
+/* COMPONENTS */
+.main_page {
+  min-height: 100vh;
+  width: 100%;
+  min-width: 410px;
+  display: flex;
+  align-items: center;
+  background-color: #d4d6d6;
+  /*  */
+  position: relative;
+  /* **************************************************** */
+  /* **************************************************** */
+}
+.main_page .calendar {
+  width: 90%;
+  max-width: 373px;
+  border-radius: 30px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: -9px 10px 11px 1px rgba(0, 0, 0, 0.36);
+}
+.main_page .change-mode {
+  display: flex;
+  justify-content: flex-end;
+}
+.main_page .change-mode svg {
+  cursor: pointer;
+}
+.main_page .change-mode svg:hover {
+  color: #09a;
+}
+.main_page .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.3rem;
+  margin: 10px 0 40px 0;
+}
+.main_page .header h2 {
+  text-decoration: none;
+  color: #000;
+  margin: 0;
+  font-weight: 500;
+  transition: 0.1s ease-in;
+}
+.main_page .header h2:hover {
+  color: #09a;
+  cursor: pointer;
+}
+.main_page .header svg {
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-size: 1rem;
+  padding: 5px;
+  box-shadow: -2px 2px 8px -1px rgba(0, 0, 0, 0.8);
+  transition: 0.1s ease-in;
+}
+.main_page .header svg:hover {
+  transform: translate(3px, -3px);
+  box-shadow: -5px 5px 17px 1px rgba(0, 0, 0, 0.8);
+  color: #09a;
+}
+.main_page .month_view {
+  font-family: "Poppins", sans-serif;
+}
+.main_page .month_view .month_days {
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  text-align: center;
+  justify-content: center;
+}
+.main_page .month_view .month_days li {
+  list-style: none;
+}
+.main_page .month_view .month_days li.week_days {
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.3333333333);
+  color: rgba(34, 17, 17, 0.6666666667);
+}
+.main_page .month_view .month_days li.week_days.sunday {
+  color: #a22;
+}
+.main_page .month_view .month_days .month_day {
+  padding: 8px 0;
+  border-radius: 12px;
+  margin: 3px;
+  border: 1px solid transparent;
+}
+.main_page .month_view .month_days .month_day.false {
+  color: rgba(0, 0, 0, 0.3333333333);
+}
+.main_page .month_view .month_days .month_day:hover {
+  border: 1px solid rgba(0, 153, 170, 0.4);
+  background-color: rgba(212, 214, 214, 0.4666666667);
+  cursor: pointer;
+}
+.main_page .month_view .month_days #active-day {
+  color: #09a;
+}
+.main_page.dark {
+  background-color: black;
+}
+
+.change_year {
+  transform: translatey(-100%);
+  transition: ease-out 0.6s;
+  height: 100%;
+  width: 100%;
+  background: rgba(221, 214, 243, 0.1);
+  background: linear-gradient(to right, rgba(221, 214, 243, 0.0901960784), rgba(250, 172, 168, 0.5333333333));
+  -webkit-backdrop-filter: blur(0.2rem);
+          backdrop-filter: blur(0.2rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.8rem;
+}
+.change_year.active {
+  transform: translateY(0);
+}
+.change_year .content {
+  width: 100%;
+  max-width: 373px;
+}
+.change_year .content .buttons {
+  position: relative;
+}
+.change_year .content .buttons .btn {
+  position: absolute;
+  top: 170px;
+  padding: 7px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #444;
+}
+.change_year .content .buttons .btn:nth-child(1) {
+  left: 80px;
+}
+.change_year .content .buttons .btn:nth-child(2) {
+  right: 60px;
+}
+.change_year .dates {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 373px;
+}
+.change_year .dates .dates_element {
+  position: absolute;
+  color: #444;
+}
+.change_year .dates .dates_element:nth-child(1) {
+  left: 40px;
+  bottom: -80px;
+}
+.change_year .dates .dates_element:nth-child(2) {
+  right: 40px;
+  bottom: -80px;
+}
+.change_year .dates .dates_element svg {
+  color: #09a;
+}
+
+.day_note {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+.day_note button {
+  border-radius: 10px;
+  border: 1px solid #444;
+  padding: 6px;
+  width: 50%;
+}/*# sourceMappingURL=styles.css.map */

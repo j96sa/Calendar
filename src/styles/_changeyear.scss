@@ -1,0 +1,73 @@
+.change_year{
+    transform: translatey(-100%);
+    transition: ease-out .6s;
+    &.active{
+        transform: translateY(0);
+    }
+
+    height: 100%;
+    width: 100%;
+    background:rgba(#ddd6f3, .1) ;    
+    background: linear-gradient(to right, #ddd6f317, #faaca888);
+    backdrop-filter: blur(.2rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: $ff-ssp;
+    font-size: 1.8rem;
+
+    .content{
+        width: 100%;
+        max-width: 373px;
+        .buttons{
+            position: relative;
+            .btn{
+                position: absolute;                
+                top: 170px;
+                &:nth-child(1){
+                    left: 80px;
+                }
+                &:nth-child(2){
+                    right: 60px;
+                }
+
+                padding: 7px;
+                border: 1px solid $grey;
+                border-radius: 10px;
+                cursor: pointer;
+                color: $grey;
+            }
+        }
+    }
+
+    .dates{
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: 373px;            
+        
+        .dates_element{      
+            position: absolute;
+            color: $grey;
+            
+            &:nth-child(1){
+                left: 40px;
+                bottom: -80px;
+            }
+
+            &:nth-child(2){
+                right: 40px;
+                bottom: -80px;
+            }
+
+            svg{
+                color: $blue-green;
+                cursor: pointer;
+            }
+        }        
+    }
+}

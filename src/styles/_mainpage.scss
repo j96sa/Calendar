@@ -1,0 +1,116 @@
+.main_page{    
+    min-height: 100vh;
+    width: 100%;
+    min-width: 410px;
+    display: flex;
+    align-items: center;
+    //background-color: #d4d6d6;
+    background-color: $mainpage-background;
+    /*  */
+    position: relative;
+
+    .calendar{
+        width: 90%;    
+        max-width: 373px;    
+        border-radius: 30px;        
+        margin: auto;
+        padding: 20px;
+        background-color: $white;
+        box-shadow: -9px 10px 11px 1px rgba(0,0,0,0.36);
+    }
+
+    .change-mode{
+        display: flex;
+        justify-content: flex-end;
+        svg{
+            cursor: pointer;
+            &:hover{
+                color: $blue-green;
+            }
+        }
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-around; 
+        font-family: $ff-ssp;
+        font-size: $fsm-xl;        
+        margin: 10px 0 40px 0;
+        h2{
+            text-decoration: none;
+            color: $black;
+            margin:0;
+            font-weight: 500;
+            transition: .1s ease-in;
+            &:hover{
+                color: $blue-green;
+                cursor: pointer;
+            }
+        }
+        svg{
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            font-size: $fsm-xl;
+            font-size: 1rem;
+            padding: 5px;            
+            box-shadow:-2px 2px 8px -1px rgba(0,0,0,0.8);
+            transition: .1s ease-in;
+            &:hover{                
+                transform: translate(3px,-3px);
+                box-shadow: -5px 5px 17px 1px rgba(0,0,0,0.8);
+                color: $blue-green;
+            }
+        }
+    }
+
+    /* **************************************************** */
+
+    .month_view{
+        font-family: $ff-p;
+
+        .month_days{            
+            li{                
+                list-style: none;
+                &.week_days{
+                    font-family: $ff-r;
+                    margin-bottom: 15px;
+                    color: $black-hover;
+                    color: #211a;
+                    &.sunday{
+                        color: #a22;
+                    }
+                }
+            }
+            display: grid;
+            grid-template-columns: repeat(7,50px);            
+            text-align: center;
+            justify-content: center;
+
+            .month_day{
+                padding: 8px 0;
+                border-radius: 12px;                
+                margin: 3px;
+                border: 1px solid transparent;                
+                &.false{
+                    color: $black-hover;
+                }
+                &:hover{
+                    border: 1px solid $blue-green_hover;
+                    background-color: $month_day-background_hover;
+                    cursor: pointer;
+                }
+            }
+
+            #active-day{
+                color:$blue-green;
+            }
+        }        
+    }
+
+    /* **************************************************** */
+    &.dark{
+        background-color: black;
+    }
+}

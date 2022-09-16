@@ -1,0 +1,98 @@
+.day_note{
+    text-align: center;
+    font-family: $ff-r;
+    margin-top: 30px;   
+    
+    .notes{
+        margin-bottom: 25px;
+
+        li{
+            display: flex;
+            justify-content: space-around;
+            height: 25px;
+            align-items: center;
+            padding: 3px;        
+            border-radius: 4px;  
+            margin-bottom: 10px;           
+
+            &.red{
+                background: $red;                
+                color: $white;
+            }
+            &.blue{
+                background:$blue;
+                color: $white;                
+            }
+            &.black{
+                background:$black;                
+                color: $white;
+            }
+            &.green{
+                background:$green;                
+            }            
+            &.violet{
+                background:$violet;                
+            }
+            &.grey{
+                background:$grey;                
+            }
+
+            p{
+                margin: 0;
+            }
+
+            svg{
+                margin: 0;
+                margin-left: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    form{
+        input{
+            width: 90%;
+            height: 25px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            border: 1px solid $grey-hover;
+            padding: 3px;
+            text-align: center;
+            outline: none;                     
+        }
+    }
+
+    select{
+        cursor: pointer;
+        margin-bottom: 25px;
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: space-around;        
+
+        button{
+            width: 30%;
+        }
+    }
+
+    button{
+        border-radius: 10px;
+        border: 1px solid $grey-hover;
+        padding: 6px;
+        
+        &:hover{
+            transition: ease .3s;
+            color: $white;
+            background: $blue-green;
+            border:1px solid $blue-green;
+            cursor: pointer;
+        }
+
+        &.add-note{
+            width: 50%;
+        }
+    }
+
+
+}
