@@ -3,10 +3,8 @@
     width: 100%;
     min-width: 410px;
     display: flex;
-    align-items: center;
-    //background-color: #d4d6d6;
-    background-color: $mainpage-background;
-    /*  */
+    align-items: center;    
+    background-color: $mainpage-background;    
     position: relative;
 
     .calendar{
@@ -75,11 +73,10 @@
                 list-style: none;
                 &.week_days{
                     font-family: $ff-r;
-                    margin-bottom: 15px;
-                    color: $black-hover;
-                    color: #211a;
+                    margin-bottom: 15px;                    
+                    color: $week-days-brown-hover;
                     &.sunday{
-                        color: #a22;
+                        color: $week-day-sunday-red;
                     }
                 }
             }
@@ -111,6 +108,50 @@
 
     /* **************************************************** */
     &.dark{
-        background-color: black;
+        background-color: $grey;
+        color: $white;
+
+        .calendar{
+            background-color: $calendar-background-dark;
+        }
+
+        .header{
+            h2{
+                color: $white;
+                &:hover{
+                    color: $blue-green;
+                    cursor: pointer;
+                }
+            }
+            svg{
+                border: 1px solid $white;
+                &:hover{
+                    border: 1px solid $blue-green;
+                }
+            }
+        }
+
+        .month_view{
+            .month_days{
+                li{
+                    &.week_days{
+                        color: $week-days-red-dark;
+                        &.sunday{
+                            color: $week-day-sunday-red;
+                        }
+                    }
+                }
+
+                .month_day{
+                    &.false{
+                        color: $grey-white-hover;
+                    }
+                    &:hover{
+                        //border: 1px solid $blue-green_hover;
+                        background-color: #181d25;  
+                    }
+                }
+            }
+        }
     }
 }
