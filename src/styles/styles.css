@@ -20,7 +20,6 @@ body {
   display: flex;
   align-items: center;
   background-color: #d4d6d6;
-  /*  */
   position: relative;
   /* **************************************************** */
   /* **************************************************** */
@@ -93,7 +92,6 @@ body {
 .main_page .month_view .month_days li.week_days {
   font-family: "Raleway", sans-serif;
   margin-bottom: 15px;
-  color: rgba(0, 0, 0, 0.3333333333);
   color: rgba(34, 17, 17, 0.6666666667);
 }
 .main_page .month_view .month_days li.week_days.sunday {
@@ -117,7 +115,36 @@ body {
   color: #09a;
 }
 .main_page.dark {
-  background-color: black;
+  background-color: #444;
+  color: #fff;
+}
+.main_page.dark .calendar {
+  background-color: #17191C;
+}
+.main_page.dark .header h2 {
+  color: #fff;
+}
+.main_page.dark .header h2:hover {
+  color: #09a;
+  cursor: pointer;
+}
+.main_page.dark .header svg {
+  border: 1px solid #fff;
+}
+.main_page.dark .header svg:hover {
+  border: 1px solid #09a;
+}
+.main_page.dark .month_view .month_days li.week_days {
+  color: rgba(180, 117, 1, 0.6117647059);
+}
+.main_page.dark .month_view .month_days li.week_days.sunday {
+  color: #a22;
+}
+.main_page.dark .month_view .month_days .month_day.false {
+  color: rgba(153, 153, 153, 0.1333333333);
+}
+.main_page.dark .month_view .month_days .month_day:hover {
+  background-color: #181d25;
 }
 
 .change_year {
@@ -184,15 +211,88 @@ body {
 }
 .change_year .dates .dates_element svg {
   color: #09a;
+  cursor: pointer;
 }
 
 .day_note {
   text-align: center;
   font-family: "Raleway", sans-serif;
+  margin-top: 30px;
+}
+.day_note .notes {
+  margin-bottom: 25px;
+}
+.day_note .notes li {
+  display: flex;
+  justify-content: space-around;
+  height: 25px;
+  align-items: center;
+  padding: 3px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.day_note .notes li.red {
+  background: #a00;
+  color: #fff;
+}
+.day_note .notes li.blue {
+  background: #00c;
+  color: #fff;
+}
+.day_note .notes li.black {
+  background: #000;
+  color: #fff;
+}
+.day_note .notes li.green {
+  background: #080;
+}
+.day_note .notes li.violet {
+  background: #ee82ee;
+}
+.day_note .notes li.grey {
+  background: #444;
+}
+.day_note .notes li p {
+  margin: 0;
+}
+.day_note .notes li svg {
+  margin: 0;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.day_note form input {
+  width: 90%;
+  height: 25px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(68, 68, 68, 0.6);
+  padding: 3px;
+  text-align: center;
+  outline: none;
+}
+.day_note select {
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+.day_note .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.day_note .buttons button {
+  width: 30%;
 }
 .day_note button {
   border-radius: 10px;
-  border: 1px solid #444;
+  border: 1px solid rgba(68, 68, 68, 0.6);
   padding: 6px;
+}
+.day_note button:hover {
+  transition: ease 0.3s;
+  color: #fff;
+  background: #09a;
+  border: 1px solid #09a;
+  cursor: pointer;
+}
+.day_note button.add-note {
   width: 50%;
 }/*# sourceMappingURL=styles.css.map */
